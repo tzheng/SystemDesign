@@ -84,6 +84,16 @@ Tell me about a time when you demonstrated leadership skills.
 
 对于有经验的面试来说有的时候会考察领导力（Leadership），对于应届毕业生也有可能会问到，问题也很简单，就是让你说说你领导的经历，很多人实际上都没有领导的经验，毕竟这样的机会不多，我觉得可以有种化解方法：把上面提到的最有挑战性的项目转化成你带领几个组员一起做，然后在这个过程中你怎么体现领导力，重点放在领导上面而不是技术细节。
 
+
+
+#### 职业生涯
+
+What's do you see yourself in 5 years? What's your career path? Is there anything change in the past few years?
+
+
+
+
+
 ## Culture Fit 类型
 
 #### 为什么跳槽，为什么来我们这儿面试？
@@ -155,12 +165,23 @@ Describe a situation... / Tell me about a time, conflict with co-worker/manager
 
 ## Negative Experience 类型
 
+#### 失败的经历/后悔的决定/如果再做一次你会改变什么
+
+What's your biggest failure? What's your most regretful decision in your work?
+
+这种负面问题是最讨厌的，很容易一不小心说多了给面试官留下坏印象，又不能太油滑回避问题。回答原则就是实话实说，说说你过去的失败经历，你犯的错误造成的后果，以及你学到了什么，比如说你可以这样：我曾经领导一个项目（可以是course project, 或者是工作上的项目），带着一堆人，起初我觉得大家都是优秀的工程师，所以开始就简单的做一个计划， 分配好任务就开始做了，做到后面慢慢发现当我们把大家的东西整合到一起的时候，我们发现了很多问题，比如有人默认其他人已经handle好了exception，他就没有再做检查等等。最后我们浪费了不少时间在debug上面。如果让我再做一次，我会花更多的时间在分析上，明确好每个人的责任，定好interface等等再分配任务，这样就能避免很多问题。
+
+我觉得这个例子一般，暂时想不到更好的回答。我在面试中遇到过这个问题，我的回答是结合我自身经历来说的，并不通用，但是回答结构和上面的例子差不多。之后如果有看到更好的例子，会再做补充。
+
+
+
 ## Question to Ask 类型
 
 无论什么面试最后一般都会留时间让你问问题，虽然很多时候只是走过场，但是并不代表这个环节不会挂人（Mitbbs的帖子也提到了：[behavior question要认真准备](http://www.mitbbs.com/article_t/JobHunting/33356703.html)）。
 
 最后这个环节很简单，肯定是要体现出对面试的职位的渴望，对面试公司的热爱。一些经典的提问：
 
+* What are you working on? \(如果之前面试官没有介绍的话）
 * What does a typical day in this role look like?
 * What are the trainings I will receive if I am hired?
 * What do you enjoy most about working here?
@@ -168,12 +189,6 @@ Describe a situation... / Tell me about a time, conflict with co-worker/manager
 * Does the company encourge us to work on different projects/teams?
 
 这些问题其实都非常笼统，我认为可以在此基础上优化一下，我叫它“**对症下药”法。**一般面试开始前面试官都会做自我介绍，可以仔细听听面试官都来自哪些组，做什么项目，最后问问题的时候可以问一些针对性的问题，比如面试官是做某个功能的，你可以说我觉得开发这个功能的challenge在这里这里，你认为是什么？比如面试官介绍说原来在A公司工作，现在来了这，你就可以问你觉得两个公司工作上、文化上有什么区别？比如面试官是一个经理，你可以问问他怎么看待员工换组的问题，怎么给员工提供继续教育的问题。其实问题还是上面列出来那些问题，只是你换了一种方式来问。万一面试官是一个很喜欢说话的人，可能这一个问题他就能说很久，如果面试官说的不多，你可以继续针对他的回答再追加问题，这样可以在一个话题上讨论很久，而且显得你尊重面试官，有认真听并且有思考。
-
-
-
-
-
-
 
 # 总结
 
