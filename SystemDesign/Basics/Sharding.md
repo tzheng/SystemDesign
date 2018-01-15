@@ -1,1 +1,4 @@
-TO BE UPDATED
+# Sharding,Partitioning和Consistent Hashing
+
+
+
