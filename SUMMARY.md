@@ -9,7 +9,7 @@
     * [CAP理论 - CAP Theory](SystemDesign/Basics/CAP.md)
     * [分区 - Sharding,Partitioning and Consistent Hashing](SystemDesign/Basics/Sharding.md)
     * [SQL vs NoSQL](SystemDesign/Basics/SQLvsNoSQL.md)
-    * Caching
+    * 缓存 - Caching
   * [系统设计问题详解 - System Design Examples](SystemDesign/Problems/README.md) 
     * [信息流 - Newsfeed/Timeline](SystemDesign/Problems/newsfeed.md)
 * [Coding](Coding/README.md)
