@@ -1,1 +1,2 @@
-TO BE UPDATED
+SQL vs NoSQL
+
