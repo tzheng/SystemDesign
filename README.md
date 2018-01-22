@@ -8,12 +8,23 @@ N年前我作为新毕业生找软件工程师工作的时候，会解答Two Sum
 
 1. [**行为问题 Behavior Questions**](https://tzheng.gitbooks.io/cracking-technical-interviews/content/behavior-interview.html)
    1. Past Experience
-   2. Why us
-   3. Tech Communication
-2. 系统设计问题 System Design
-3. 编程问题 Coding
-   1. F家面经全解析
-   2. ...
+   2. Culture Fit
+   3. Negative Experience
+   4. Question to Ask
+   5. 总结
+2. 系统设计问题 System Design  
+   1. 系统设计基本概念  
+      1. 基本数据估算 - Estimations  
+      2. CAP理论 - CAP Theory  
+      3. 分区 - Sharding, Partitioning, Consistent Hashing  
+      4. 数据存储 - SQL, NoSQL
+
+   1. 缓存 - Caching
+
+3. 编程问题 Coding  
+   1. F家面经全解析  
+   2. L家面经全解析  
+   3. Leetcode全解
 
 当然，这些内容本身也是个人经验的总结，可能对我来说比较适用，我自己也在不断学习和提高，
 
