@@ -12,14 +12,15 @@ N年前我作为新毕业生找软件工程师工作的时候，会解答Two Sum
    3. Negative Experience
    4. Question to Ask
    5. 总结
-2. 系统设计问题 System Design  
-   1. 系统设计基本概念  
-      1. 基本数据估算 - Estimations  
-      2. CAP理论 - CAP Theory  
-      3. 分区 - Sharding, Partitioning, Consistent Hashing  
-      4. 数据存储 - SQL, NoSQL
+2. 系统设计问题 System Design
 
-   1. 缓存 - Caching
+   1. 系统设计基本概念  
+         1. 基本数据估算 - Estimations  
+         2. CAP理论 - CAP Theory  
+         3. 分区 - Sharding, Partitioning, Consistent Hashing  
+         4. 数据存储 - SQL, NoSQL
+
+   2. 系统设计问题详解
 
 3. 编程问题 Coding  
    1. F家面经全解析  
