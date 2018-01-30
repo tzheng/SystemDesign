@@ -1,26 +1,24 @@
 # 数据存储 - SQL, NoSQL
 
-
-
 ## 概念
+
+数据存储是系统设计中最重要的环节之一，通常是考察面试者对关系型数据库和非关系型数据库的理解，在极少数情况下也可能会使用文件系统，或者分布式文件系统。这里我们主要还是着重说一下 SQL vs NoSQL
 
 ## SQL基本概念
 
 这里说的SQL代表的是关系型数据库\(RDBMS\)，并不是代表一个单一的产品，比如MySQL。 在系统设计的时候，只要能做出适当的权衡，在关系型数据库和非关系型数据库中选出适合的结果即可，并不需要具体到某一个产品，除非特殊职位，一般不会问你MySQL和Oracle的区别之类的问题。
 
-网上有非常多的资料介绍什么是SQL，这里就不做更多叙述，参考资料：
+网上有非常多的资料介绍什么是SQL，相信学习过计算机课程的人在作业或者项目中多多少少都用过SQL，这里就不对SQL的定义和种类做更多叙述，还是主要讨论和系统设计相关的内容。
 
 
 
 备份，分区..
 
-
-
 ## NoSQL基本概念
 
 备份，分区...
 
-
+## 
 
 ## 选择合适的数据库
 
@@ -32,11 +30,25 @@
 
 ### SQL适用的场景
 
-### 
+**数据非常规范，有结构化的数据一般使用SQL。**因为通常情况下，如果数据是结构化的，业务层的需求可能会带有复杂的query，SQL可以建立多重索引，可以提高查询效率，NoSQL在支持secondary index方面不如SQL。
+
+**数据一致性\(consistency\)比较重要。**SQL的ACID特性可保证事物正确可靠，如果系统设计需求中有提到需要支持transaction，尤其是涉及钱的时候（比如银行转账系统），很有可能需要使用SQL。
+
+**需要成熟的解决方案。 **SQL就是Structured Query Language，提供了成熟的结构化查询语言。除了查询语言之外，由于历史较长，SQL的搭建流程，配置，库\(Library\)等各个方面都比较成熟，用户社区也活跃，出现问题容易找到解决方案。在选择SQL和NoSQL区别不大的时候，可以考虑使用SQL，节省时间和人力成本。
 
 ### NoSQL使用的场景
 
-### 
+
+
+
+
+参考资料
+
+《NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence》- by Pramod J. Sadalage,‎ Martin Fowler 
+
+https://www.w3resource.com/mongodb/nosql.php
+
+https://github.com/donnemartin/system-design-primer\#database
 
 
 
