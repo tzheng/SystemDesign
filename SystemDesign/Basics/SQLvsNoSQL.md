@@ -22,7 +22,7 @@ SQL事务的ACID特性十分重要，往往用这个特性来判断SQL是否合�
 
 #### SQL如何Scale up
 
-当我们只有一台机器（SQL服务器）的时候，在负载增加的情况下，这台机器可能成为整个系统的瓶颈，为了保证系统的性能，我们就要增加多台机器。增加多台机器的时候，就会带来一些问题，比如如何保证各台机器上的数据的一致性？各台机器之间的关系是什么，如何协调？解决这些问题，SQL的方法比较成熟，常见的有Master-Slave 和 Master-Master。
+当我们只有一台机器（SQL服务器）的时候，在负载增加的情况下，这台机器可能成为整个系统的瓶颈，为了保证系统的性能，我们就要增加多台机器\(Replication\)。增加多台机器的时候，就会带来一些问题，比如如何保证各台机器上的数据的一致性？各台机器之间的关系是什么，如何协调？解决这些问题，SQL的方法比较成熟，常见的有Master-Slave 和 Master-Master。
 
 Master-Slave 模式[![](/assets/master-slave.png)](https://camo.githubusercontent.com/6a097809b9690236258747d969b1d3e0d93bb8ca/687474703a2f2f692e696d6775722e636f6d2f4339696f47746e2e706e67)[Source: Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
 
@@ -46,7 +46,11 @@ Master-Slave的缺点
 
 #### NoSQL种类
 
+
+
 #### NoSQL如何Scale up
+
+
 
 ## 选择合适的数据库
 
