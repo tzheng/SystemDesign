@@ -46,11 +46,7 @@ Master-Slave的缺点
 
 #### NoSQL种类
 
-
-
 #### NoSQL如何Scale up
-
-
 
 ## 选择合适的数据库
 
@@ -78,11 +74,17 @@ Master-Slave的缺点
 
 **数据量较大大，操作频繁，QPS较高的时候。**总的来说NoSQL天生就适合scale up，在面对大量负载的时候，NoSQL的performance和availability都比SQL好。此外关系型数据库的JOIN复杂度不低 -- 《[how evil is sql join](https://www.quora.com/How-evil-is-SQL-Join)》。
 
-参考资料
+
+
+
+
+#### 参考资料
 
 《NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence》- by Pramod J. Sadalage,‎ Martin Fowler
 
 [https://www.w3resource.com/mongodb/nosql.php](https://www.w3resource.com/mongodb/nosql.php)
 
 [https://github.com/donnemartin/system-design-primer\#database](https://github.com/donnemartin/system-design-primer#database)
+
+
 
