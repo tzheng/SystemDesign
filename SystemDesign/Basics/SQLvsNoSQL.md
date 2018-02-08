@@ -6,17 +6,41 @@
 
 ## SQL基本概念
 
-这里说的SQL代表的是关系型数据库\(RDBMS\)，并不是代表一个单一的产品，比如MySQL。 在系统设计的时候，只要能做出适当的权衡，在关系型数据库和非关系型数据库中选出适合的结果即可，并不需要具体到某一个产品，除非特殊职位，一般不会问你MySQL和Oracle的区别之类的问题。
+这里说的SQL代表的是关系型数据库\(RDBMS\)，并不是代表一个单一的产品，比如MySQL。 在系统设计的时候，只要能做出适当的权衡，在关系型数据库和非关系型数据库中选出适合的结果即可，并不需要具体到某一个产品，除非特殊职位，一般不会问你MySQL和Oracle的区别之类的问题。网上有非常多的资料介绍什么是SQL，相信学习过计算机课程的人在作业或者项目中多多少少都用过SQL，这里就不对SQL的定义和种类做更多叙述，还是主要讨论和系统设计相关的内容。
 
-网上有非常多的资料介绍什么是SQL，相信学习过计算机课程的人在作业或者项目中多多少少都用过SQL，这里就不对SQL的定义和种类做更多叙述，还是主要讨论和系统设计相关的内容。
+SQL最重要的特性之一就是SQL能支持事务\(transaction\)，transaction有四个重要的特性，我直接引用[维基百科](https://zh.wikipedia.org/wiki/ACID)：**ACID**，是指数据库管理系统（DBMS）在写入或更新资料的过程中，为保证事务（transaction）是正确可靠的，所必须具备的四个特性：原子性（atomicity，或称不可分割性）、一致性（consistency）、隔离性（isolation，又称独立性）、持久性（durability）。
 
-备份，分区， ACID
+原子性：一个事务（transaction）中的所有操作，要么全部完成，要么全部不完成，不会结束在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。
+
+一致性：在事务开始之前和事务结束以后，数据库的完整性没有被破坏。这表示写入的资料必须完全符合所有的预设规则，这包含资料的精确度、串联性以及后续数据库可以自发性地完成预定的工作。
+
+隔离性：数据库允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执行时由于交叉执行而导致数据的不一致。事务隔离分为不同级别，包括读未提交（Read uncommitted）、读提交（read committed）、可重复读（repeatable read）和串行化（Serializable）。
+
+持久性：事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。
+
+SQL事务的ACID特性十分重要，往往用这个特性来判断SQL是否合适，但是并不是说SQL就一定要支持transaction，在某些情况下也不一定要做到ACID，最终还是根据系统设计的需求来决定。
+
+#### SQL如何Scale up 
+
+SQL的scale up方式比较成熟，常见的有Master-Slave 和 Master-Master。当我们只有一台机器（SQL服务器）的时候，在负载增加的情况下，这台机器可能成为整个系统的瓶颈，那么
+
+Master-Slave 模式[![](/assets/master-slave.png)](https://camo.githubusercontent.com/6a097809b9690236258747d969b1d3e0d93bb8ca/687474703a2f2f692e696d6775722e636f6d2f4339696f47746e2e706e67)[Source: Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
+
+
+
+
 
 ## NoSQL基本概念
 
 备份，分区, BASE
 
-## 
+#### NoSQL种类
+
+#### NoSQL如何Scale up
+
+
+
+
 
 ## 选择合适的数据库
 
@@ -30,7 +54,7 @@
 
 **数据非常规范，相互联系紧密，有结构化的数据一般使用SQL。**因为通常情况下，如果数据是结构化的，业务层的需求可能会带有复杂的query，SQL可以建立多重索引，可以提高查询效率，NoSQL在支持secondary index方面不如SQL。
 
-**数据一致性\(consistency\)比较重要。**SQL的ACID特性可保证事物正确可靠，如果系统设计需求中有提到需要支持transaction，尤其是涉及钱的时候（比如银行转账系统），很有可能需要使用SQL。
+**数据一致性\(consistency\)比较重要。**SQL事务的ACID特性可保证事物正确可靠，如果系统设计需求中有提到需要支持transaction保证ACID特性，尤其是涉及钱的时候（比如银行转账系统），很有可能需要使用SQL。
 
 **需要成熟的解决方案。 **SQL就是Structured Query Language，提供了成熟的结构化查询语言。除了查询语言之外，由于历史较长，SQL的搭建流程，配置，库\(Library\)等各个方面都比较成熟，用户社区也活跃，出现问题容易找到解决方案。同时scale up的时候也有比较清晰的模式\(pattern\)
 
