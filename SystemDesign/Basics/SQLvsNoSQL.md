@@ -24,7 +24,7 @@ SQL事务的ACID特性十分重要，往往用这个特性来判断SQL是否合�
 
 当我们只有一台机器（SQL服务器）的时候，在负载增加的情况下，这台机器可能成为整个系统的瓶颈，为了保证系统的性能，我们就要增加多台机器\(Replication\)。增加多台机器的时候，就会带来一些问题，比如如何保证各台机器上的数据的一致性？各台机器之间的关系是什么，如何协调？解决这些问题，SQL的方法比较成熟，常见的有Master-Slave 和 Master-Master。
 
-##### **Master-Slave 模式**
+##### **Master-Slave Replication 模式**
 
 Master-Slave模式就是选择一台机器作为master，剩下的机器作为slave，当需要写入数据的时候，只能写到Master机器上，这样就能支持事务\(transaction\)，保证了数据的一致性。当需要读取的时候，由Load Balancer分配，到任意一台slave机器上读取，这样就均衡了负载，系统能处理的QPS就更高了。
 
@@ -35,18 +35,38 @@ Master并不是固定的某台机器，如果master机器坏了，可以指派\(
 Master-Slave的适用场景
 
 * Master-Slave模式只有一台机器处理写入请求，多台机器处理读，所以这个模式**特别适合读多写少**的情况**。**
+* 即使Master故障，系统仍然可以支持读操作\(read\)
 
 Master-Slave的缺点
 
 * 一台master仍然会是single point of failure
+* 如果slave机器较多，replicate的成本较高，时间比较长
+* 如果写操作较多，master频繁复制到slave上，占用了slave的机器资源，影响性能（所以这个模式适合**读多写少**）
+* master故障的时候，master上新写入的数据来不及复制到任何slave上，新数据暂时丢失
+
+##### Master-Master Replication 模式
+
+考虑到Master-Slave只有一台机器写，有可能不够，所以另外一个模式是让两（多）台机器做master。两台机器都处理读和写的请求。
+
+Master-Master的适用场景
+
+* 写和读的请求差不多的时候，或者写多读少的情况
+* 需要更高的可用性的时候，一台master故障，另外一台能正常工作
+
+Master-Master的缺点
+
+* 如果要保证两台master机器数据一致\(consistency\)，两台机器在写的时候要同步\(synchronize\)，增加延时write latency
+* 如果要保证系统可用性，减小write latency, 就要牺牲一致性，这样就不能支持ACID事务了
+* 同步的时候可能需要解决数据冲突（Conflict），交给用户？last write wins？...
+* 可能需要自己做load balance，分配好读写任务保证负载均衡
+
+如果有多台master，我们要考虑数据的强一致性（strong consistency）的问题，这里可以参考[** Paxos algorithm**](https://www.quora.com/In-distributed-systems-what-is-a-simple-explanation-of-the-Paxos-algorithm) 这是一个必须掌握的概念，我以后会增加这一部分的内容。
 
 
 
-##### Master-Master模式
+**最后，不管是Master-Slave还是Master-Master，这都不是数据库系统特有的scale up方式，其他系统也可以采用。其他的scale up方法有replication和sharding，常见的方法和优缺点会在《分区 - Sharding, Partitoning》里面说到。**
 
 
-
-**不管是Master-Slave还是Master-Master，这都不是数据库系统特有的scale up方式，其他系统也可以采用。其他的scale up方法有replication和sharding，会在《分区 - Sharding, Partitoning》里面说到。**
 
 ## NoSQL基本概念
 
