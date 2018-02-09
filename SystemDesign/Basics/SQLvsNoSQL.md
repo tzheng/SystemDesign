@@ -22,7 +22,7 @@ SQL事务的ACID特性十分重要，往往用这个特性来判断SQL是否合�
 
 #### SQL如何Scale up
 
-当我们只有一台机器（SQL服务器）的时候，在负载增加的情况下，这台机器可能成为整个系统的瓶颈，为了保证系统的性能，我们就要增加多台机器\(Replication\)。增加多台机器的时候，就会带来一些问题，比如如何保证各台机器上的数据的一致性？各台机器之间的关系是什么，如何协调？解决这些问题，SQL的方法比较成熟，常见的有Master-Slave 和 Master-Master。
+当我们只有一台机器（SQL服务器）的时候，在负载增加的情况下，这台机器可能成为整个系统的瓶颈，为了保证系统的性能，要么我们就制造一台更强的机器，但是技术发展日新月异，买高性能的机器很贵，很快就被淘汰了，这个方法被证明不如增加多台便宜的机器好用\(Replication\)。增加多台机器的时候，就会带来一些问题，比如如何保证各台机器上的数据的一致性？各台机器之间的关系是什么，如何协调？解决这些问题，SQL的方法比较成熟，常见的有Master-Slave 和 Master-Master。
 
 ##### **Master-Slave Replication 模式**
 
@@ -62,19 +62,21 @@ Master-Master的缺点
 
 如果有多台master，我们要考虑数据的强一致性（strong consistency）的问题，这里可以参考[** Paxos algorithm**](https://www.quora.com/In-distributed-systems-what-is-a-simple-explanation-of-the-Paxos-algorithm) 这是一个必须掌握的概念，我以后会增加这一部分的内容。
 
-
-
 **最后，不管是Master-Slave还是Master-Master，这都不是数据库系统特有的scale up方式，其他系统也可以采用。其他的scale up方法有replication和sharding，常见的方法和优缺点会在《分区 - Sharding, Partitoning》里面说到。**
-
-
 
 ## NoSQL基本概念
 
-备份，分区, BASE
+NoSQL原本指的是一切不是SQL的数据库，2009年，Last.fm的Johan Oskarsson发起了一次关于分布式开源数据库的讨论，来自Rackspace的Eric Evans再次提出了NoSQL的概念，这时的NoSQL主要指**非关系型、分布式、不提供ACID的数据库设计模式**\([source: wikipedia](https://en.wikipedia.org/wiki/NoSQL)\)。因为其具有水平可扩展性\(horizontal scale\)，NoSQL天生就自带scale up能力。
 
-#### NoSQL种类
+ NoSQL种类
 
-#### NoSQL如何Scale up
+key-value
+
+wide column, 
+
+graph
+
+document
 
 ## 选择合适的数据库
 
