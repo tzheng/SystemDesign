@@ -1,4 +1,4 @@
-# Sharding,Partitioning和Consistent Hashing
+# Sharding,Partitioning
 
 
 

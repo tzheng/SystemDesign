@@ -7,7 +7,8 @@
   * [系统设计基本概念 - System Design Basic Concepts](SystemDesign/Basics/README.md)
     * [基本数据估算 - Estimation](SystemDesign/Basics/Estimations.md)
     * [CAP理论 - CAP Theory](SystemDesign/Basics/CAP.md)
-    * [分区 - Sharding,Partitioning and Consistent Hashing](SystemDesign/Basics/Sharding.md)
+    * 一致性哈希 - Consistent Hashing
+    * [分区 - Sharding,Partitioning](SystemDesign/Basics/Sharding.md)
     * [数据存储 - SQL, NoSQL](SystemDesign/Basics/SQLvsNoSQL.md)
     * [缓存 - Caching](SystemDesign/Basics/huan-cun-caching.md)
     * [地理位置服务 - Location Based Service](SystemDesign/Basics/di-li-wei-zhi-fu-wu-location-based-service.md)

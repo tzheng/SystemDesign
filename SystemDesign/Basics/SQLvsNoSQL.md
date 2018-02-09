@@ -24,9 +24,9 @@ SQL事务的ACID特性十分重要，往往用这个特性来判断SQL是否合�
 
 当我们只有一台机器（SQL服务器）的时候，在负载增加的情况下，这台机器可能成为整个系统的瓶颈，为了保证系统的性能，我们就要增加多台机器\(Replication\)。增加多台机器的时候，就会带来一些问题，比如如何保证各台机器上的数据的一致性？各台机器之间的关系是什么，如何协调？解决这些问题，SQL的方法比较成熟，常见的有Master-Slave 和 Master-Master。
 
-##### **Master-Slave 模式**[![](/assets/master-slave.png)](https://camo.githubusercontent.com/6a097809b9690236258747d969b1d3e0d93bb8ca/687474703a2f2f692e696d6775722e636f6d2f4339696f47746e2e706e67)[Source: Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
+##### **Master-Slave 模式**
 
-上图已经显示的很清楚了，Master-Slave模式就是选择一台机器作为master，剩下的机器作为slave，当需要写入数据的时候，只能写到Master机器上，这样就能支持事务\(transaction\)，保证了数据的一致性。当需要读取的时候，由Load Balancer分配，到任意一台slave机器上读取，这样就均衡了负载，系统能处理的QPS就更高了。
+Master-Slave模式就是选择一台机器作为master，剩下的机器作为slave，当需要写入数据的时候，只能写到Master机器上，这样就能支持事务\(transaction\)，保证了数据的一致性。当需要读取的时候，由Load Balancer分配，到任意一台slave机器上读取，这样就均衡了负载，系统能处理的QPS就更高了。
 
 既然写只能写到Master机器上，那么Master机器在获得新数据的时候，就要同步数据到Slave机器上，同步的过程需要时间，所以有可能某个时刻master和slave上的数据不同，前面的CAP理论就讲到，Consistency和Availability不可兼得，既然我们要系统在负载大的时候可用性高，就要牺牲读的一致性，有的时候可能读到旧数据。但是一台master保证了写入的时候不会有冲突。
 
@@ -34,17 +34,19 @@ Master并不是固定的某台机器，如果master机器坏了，可以指派\(
 
 Master-Slave的适用场景
 
-* Master-Slave模式只有一台机器处理写入请求，所以这个模式**特别适合读多写少**的情况**。**
+* Master-Slave模式只有一台机器处理写入请求，多台机器处理读，所以这个模式**特别适合读多写少**的情况**。**
 
 Master-Slave的缺点
 
-* 一台master忍忍
+* 一台master仍然会是single point of failure
 
 
 
 ##### Master-Master模式
 
 
+
+**不管是Master-Slave还是Master-Master，这都不是数据库系统特有的scale up方式，其他系统也可以采用。其他的scale up方法有replication和sharding，会在《分区 - Sharding, Partitoning》里面说到。**
 
 ## NoSQL基本概念
 
