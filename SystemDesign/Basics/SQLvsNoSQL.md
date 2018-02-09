@@ -24,7 +24,7 @@ SQL事务的ACID特性十分重要，往往用这个特性来判断SQL是否合�
 
 当我们只有一台机器（SQL服务器）的时候，在负载增加的情况下，这台机器可能成为整个系统的瓶颈，为了保证系统的性能，我们就要增加多台机器\(Replication\)。增加多台机器的时候，就会带来一些问题，比如如何保证各台机器上的数据的一致性？各台机器之间的关系是什么，如何协调？解决这些问题，SQL的方法比较成熟，常见的有Master-Slave 和 Master-Master。
 
-Master-Slave 模式[![](/assets/master-slave.png)](https://camo.githubusercontent.com/6a097809b9690236258747d969b1d3e0d93bb8ca/687474703a2f2f692e696d6775722e636f6d2f4339696f47746e2e706e67)[Source: Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
+##### **Master-Slave 模式**[![](/assets/master-slave.png)](https://camo.githubusercontent.com/6a097809b9690236258747d969b1d3e0d93bb8ca/687474703a2f2f692e696d6775722e636f6d2f4339696f47746e2e706e67)[Source: Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
 
 上图已经显示的很清楚了，Master-Slave模式就是选择一台机器作为master，剩下的机器作为slave，当需要写入数据的时候，只能写到Master机器上，这样就能支持事务\(transaction\)，保证了数据的一致性。当需要读取的时候，由Load Balancer分配，到任意一台slave机器上读取，这样就均衡了负载，系统能处理的QPS就更高了。
 
@@ -34,11 +34,17 @@ Master并不是固定的某台机器，如果master机器坏了，可以指派\(
 
 Master-Slave的适用场景
 
-* Master-Slave模式只有一台机器处理写入请求，它会是single point of failure。所以这个模式**特别适合读多写少**的情况**。**
+* Master-Slave模式只有一台机器处理写入请求，所以这个模式**特别适合读多写少**的情况**。**
 
 Master-Slave的缺点
 
-## 
+* 一台master忍忍
+
+
+
+##### Master-Master模式
+
+
 
 ## NoSQL基本概念
 
@@ -74,10 +80,6 @@ Master-Slave的缺点
 
 **数据量较大大，操作频繁，QPS较高的时候。**总的来说NoSQL天生就适合scale up，在面对大量负载的时候，NoSQL的performance和availability都比SQL好。此外关系型数据库的JOIN复杂度不低 -- 《[how evil is sql join](https://www.quora.com/How-evil-is-SQL-Join)》。
 
-
-
-
-
 #### 参考资料
 
 《NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence》- by Pramod J. Sadalage,‎ Martin Fowler
@@ -85,6 +87,4 @@ Master-Slave的缺点
 [https://www.w3resource.com/mongodb/nosql.php](https://www.w3resource.com/mongodb/nosql.php)
 
 [https://github.com/donnemartin/system-design-primer\#database](https://github.com/donnemartin/system-design-primer#database)
-
-
 
