@@ -76,13 +76,9 @@ Key-value Store可以直接想象成Hash Table，适合数据结构比较简单�
 
 Wide-column Store也是非常常用的，典型的代表就是[BigTable](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)，[HBase](http://hbase.apache.org/book.html#arch.overview)和[Cassandra](https://docs.datastax.com/en/archived/cassandra/2.0/cassandra/architecture/architectureIntro_c.html)，这三个并不是都要掌握的很细，选一个作为例子了解什么是Row key，也就是partition key，什么是Column Family\(group of column\) 和 Column\(name/value pair\)。了解NoSQL的最佳方式是快速翻阅这本书 《NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence》，有中文版。
 
-
-
 ##### NoSQL如何Scale Up
 
 NoSQL本身就是分布式的，所以scale up的方式也是分布式计算的经典方式，这部分内容会在 [《分区 - Sharding, Partitioning》](/SystemDesign/Basics/Sharding.md)里面具体解释。
-
-
 
 ## 选择合适的数据库
 
@@ -108,7 +104,7 @@ NoSQL本身就是分布式的，所以scale up的方式也是分布式计算的�
 
 **系统的可用性\(availability\)比较重要的时候。**比如在使用SQL的时候，为了保证consistency，一般会选一个master，那么在master出问题的时候就会有单点故障\(single point of failure\)，所以在对系统可用行要求比较高，数据一致性不那么重要的时候，比如社交网络，一般可以使用NoSQL
 
-**数据量较大大，操作频繁，QPS较高的时候。**总的来说NoSQL天生就适合scale up，在面对大量负载的时候，NoSQL的performance和availability都比SQL好。此外关系型数据库的JOIN复杂度不低 -- 《[how evil is sql join](https://www.quora.com/How-evil-is-SQL-Join)》。
+**数据量较大大，操作频繁，QPS较高的时候。**总的来说NoSQL天生就适合scale up，在面对大量负载的时候，NoSQL的performance和availability都比SQL好。如果操作频繁，关系型数据库可能要频繁重建index，影响效率。此外关系型数据库的JOIN复杂度不低 -- 《[how evil is sql join](https://www.quora.com/How-evil-is-SQL-Join)》。
 
 #### 参考资料
 
