@@ -62,21 +62,27 @@ Master-Master的缺点
 
 如果有多台master，我们要考虑数据的强一致性（strong consistency）的问题，这里可以参考[** Paxos algorithm**](https://www.quora.com/In-distributed-systems-what-is-a-simple-explanation-of-the-Paxos-algorithm) 这是一个必须掌握的概念，我以后会增加这一部分的内容。
 
-**最后，不管是Master-Slave还是Master-Master，这都不是数据库系统特有的scale up方式，其他系统也可以采用。其他的scale up方法有replication和sharding，常见的方法和优缺点会在《分区 - Sharding, Partitoning》里面说到。**
+**最后，不管是Master-Slave还是Master-Master，这都不是数据库系统特有的scale up方式，其他系统也可以采用。其他的scale up方法有replication和sharding，常见的方法和优缺点会在**[**《分区 - Sharding, Partitoning》**](/SystemDesign/Basics/Sharding.md)**里面说到。**
 
 ## NoSQL基本概念
 
 NoSQL原本指的是一切不是SQL的数据库，2009年，Last.fm的Johan Oskarsson发起了一次关于分布式开源数据库的讨论，来自Rackspace的Eric Evans再次提出了NoSQL的概念，这时的NoSQL主要指**非关系型、分布式、不提供ACID的数据库设计模式**\([source: wikipedia](https://en.wikipedia.org/wiki/NoSQL)\)。因为其具有水平可扩展性\(horizontal scale\)，NoSQL天生就自带scale up能力。
 
- NoSQL种类
+##### NoSQL种类
 
-key-value
+面试中比较常见的一般是key-value store或者Wide-column Store，其他的比如Graph Database 或者 Document Store应该是很少见的，一般不会涉及。
 
-wide column, 
+Key-value Store可以直接想象成Hash Table，适合数据结构比较简单的情况，因为读写复杂度都是O\(1\)，它的效率非常高，由于不需要建立类似SQL的index，也比较适合增删改查十分频繁的情况。它的缺点也是因为结构简单，有时候无法保证value的数据都是valid，比如value中某个attribute name拼写错误；它也无法支持跨表查询\(JOIN table\)。
 
-graph
+Wide-column Store也是非常常用的，典型的代表就是[BigTable](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)，[HBase](http://hbase.apache.org/book.html#arch.overview)和[Cassandra](https://docs.datastax.com/en/archived/cassandra/2.0/cassandra/architecture/architectureIntro_c.html)，这三个并不是都要掌握的很细，选一个作为例子了解什么是Row key，也就是partition key，什么是Column Family\(group of column\) 和 Column\(name/value pair\)。了解NoSQL的最佳方式是快速翻阅这本书 《NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence》，有中文版。
 
-document
+
+
+##### NoSQL如何Scale Up
+
+NoSQL本身就是分布式的，所以scale up的方式也是分布式计算的经典方式，这部分内容会在 [《分区 - Sharding, Partitioning》](/SystemDesign/Basics/Sharding.md)里面具体解释。
+
+
 
 ## 选择合适的数据库
 
