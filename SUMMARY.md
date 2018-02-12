@@ -20,5 +20,8 @@
   * [Decode Ways](Coding/DecodeWays.md)
   * [Majority Element 找主元素](Coding/majority-element-zhao-zhu-yuan-su.md)
 * [计算机后端开发基本概念](ji-suan-ji-hou-duan-kai-fa-ji-ben-gai-nian.md)
-  * Inversion of Control
+  * [Inversion of Control](ji-suan-ji-hou-duan-kai-fa-ji-ben-gai-nian/inversion-of-control.md)
+  * Garbage Collection
+
+
 
