@@ -8,7 +8,17 @@
 
 缓存可以再任何地方使用，系统设计过程中，往往会涉及到客户端\(client\)，服务器端\(server\)，和数据库端的设计，在任何一个环节我们都可以考虑使用缓存来提高响应速度。同时，缓存也可以作为一个单独的层级\(layer\)存在。
 
-CDN
+#### CDN
+
+#### Client
+
+#### Server
+
+#### Database Cache
+
+#### Distributed Cache
+
+#### 
 
 ## 缓存更新时机
 
@@ -20,9 +30,16 @@ CDN
 
 #### Write-back
 
-
-
 # 缓存的优缺点
+
+优点
+
+* 访问速度快，提升系统性能，可能减少traffic
+
+缺点：
+
+* 需要保持缓存和数据库之间数据的一致性，选择合适的更新时机和淘汰算法并不容易
+* 增加一层缓存就增加了一层复杂（another layer of complexity），增加工作量。
 
 # 缓存淘汰算法 - Eviction Policies
 
@@ -34,7 +51,5 @@ CDN
 * Least Recently Used \(LRU\): 非常常用的缓存算法，基于“如果一个数据在最近一段时间没有被访问到，那么在将来它被访问的可能性也很小”的思路，Leetcode上有LRU的题目，建议自己实现。
 * Least Frequently Used \(LFU\): 使用最不频繁的最先淘汰，基于“如果一个数据在最近一段时间内使用次数很少，那么在将来一段时间内被使用的可能性也很小”的思路。Leetcode上有LFU的题目，建议自己实现。
 
-当然还有其他的，MRU\(Most Recently Used\)、MFU\(Most Frequently Used\), Random Replacement等等，看名字大概就知道什么意思了。
-
-
+当然还有其他的，MRU\(Most Recently Used\)、MFU\(Most Frequently Used\), Random Replacement等等，看名字大概就知道什么意思了，具体可以参考维基百科： [https://en.wikipedia.org/wiki/Cache\_replacement\_policies](https://en.wikipedia.org/wiki/Cache_replacement_policies)
 
