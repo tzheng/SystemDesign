@@ -6,7 +6,7 @@
   * [设计入门 - Design TinyURL](SystemDesign/TinyURL.md)
   * [系统设计基本概念 - System Design Basic Concepts](SystemDesign/Basics/README.md)
     * [基本数据估算 - Estimation](SystemDesign/Basics/Estimations.md)
-    * [CAP理论 - CAP Theory](SystemDesign/Basics/CAP.md)
+    * [CAP定理 - CAP Theorem](/SystemDesign/Basics/CAP.md)
     * [一致性哈希 - Consistent Hashing](SystemDesign/Basics/yi-zhi-xing-ha-xi-consistent-hashing.md)
     * [分区 - Sharding,Partitioning](SystemDesign/Basics/Sharding.md)
     * [数据存储 - SQL, NoSQL](SystemDesign/Basics/SQLvsNoSQL.md)
