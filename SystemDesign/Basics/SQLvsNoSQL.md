@@ -68,6 +68,16 @@ Master-Master的缺点
 
 NoSQL原本指的是一切不是SQL的数据库，2009年，Last.fm的Johan Oskarsson发起了一次关于分布式开源数据库的讨论，来自Rackspace的Eric Evans再次提出了NoSQL的概念，这时的NoSQL主要指**非关系型、分布式、不提供ACID的数据库设计模式**\([source: wikipedia](https://en.wikipedia.org/wiki/NoSQL)\)。因为其具有水平可扩展性\(horizontal scale\)，NoSQL天生就自带scale up能力。
 
+##### NoSQL特性
+
+NoSQL的特性可以用BASE来概括，他们是
+
+**B**asically **A**vailable，整个系统保证[CAP定理](//SystemDesign/Basics/CAP.md)里面的 availability，一部分节点故障了，系统（其他部分）仍然可以正常工作。
+
+**S**oft state, Data may be time-dependent on user interaction with possible expiration after a period of time.
+
+**E**ventual consistency，最终一致性，各个节点同步需要时间，允许在这期间内数据不一致现象，只要同步完成后数据最终是一致的就可以
+
 ##### NoSQL种类
 
 面试中比较常见的一般是key-value store或者Wide-column Store，其他的比如Graph Database 或者 Document Store应该是很少见的，一般不会涉及。
@@ -92,7 +102,7 @@ NoSQL本身就是分布式的，所以scale up的方式也是分布式计算的�
 
 **数据非常规范，相互联系紧密，有结构化的数据一般使用SQL。**因为通常情况下，如果数据是结构化的，业务层的需求可能会带有复杂的query，SQL可以建立多重索引，可以提高查询效率，NoSQL在支持secondary index方面不如SQL。
 
-**数据一致性\(consistency\)比较重要。**根据[**CAP定理**](//SystemDesign/Basics/CAP.md)**，**在满足分区容错\(P\)的情况下，可用性\(A\)和一致性\(C\)只能选择一个，SQL的事务选择了C。SQL事务的ACID特性可保证事物正确可靠，如果系统设计需求中有提到需要支持transaction保证ACID特性，尤其是涉及钱的时候（比如银行转账系统），很有可能需要使用SQL。
+**数据一致性\(consistency\)比较重要。**SQL事务的ACID特性可保证事物正确可靠，如果系统设计需求中有提到需要支持transaction保证ACID特性，尤其是涉及钱的时候（比如银行转账系统），很有可能需要使用SQL。
 
 **需要成熟的解决方案。 **SQL就是Structured Query Language，提供了成熟的结构化查询语言。除了查询语言之外，由于历史较长，SQL的搭建流程，配置，库\(Library\)等各个方面都比较成熟，用户社区也活跃，出现问题容易找到解决方案。同时scale up的时候也有比较清晰的模式\(pattern\)
 
