@@ -2,6 +2,13 @@
 
 稍微有一些计算机基础的人都知道，在设计算法的时候，需要考虑时间复杂度和空间复杂度，**时间换空间，空间换时间，**要根据实际情况来选择合适的算法，在时间和空间之间做权衡。系统设计也类似，需要在不同的选择之间做权衡，不过不是时间和空间，而是一致性\(consistency\)和可用性\(availability\)，也就是“**consistency换availability，availability换consistency**”，在整个系统设计的过程中，都要把这句话放在心上，这里说的consistency和availability就是CAP里面的C和A。
 
+我一直认为系统设计应该多看资料，从不同的角度看同一个问题，所以除了我的总结之外，大家也可以参考其他人的总结。
+
+* [The CAP FAQ](https://github.com/henryr/cap-faq) \(英文）
+* [分布式理论基础 - CAP](#)（中文）
+
+
+
 根据[维基百科](https://zh.wikipedia.org/wiki/CAP定理)
 
 > 在[理论计算机科学](https://zh.wikipedia.org/wiki/理論計算機科學)中，**CAP定理**（CAP theorem），又被称作**布鲁尔定理**（Brewer's theorem），它指出对于一个[分布式计算系统](https://zh.wikipedia.org/wiki/分布式计算)来说，不可能同时满足以下三点：
