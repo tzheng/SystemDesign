@@ -38,5 +38,17 @@
 
 > 题目：设计一个类似twitter或者facebook的newsfeed/timeline ，假设100M 日活用户\(DAU\)，估算QPS，估算数据量
 
+第二种是细节的估算，Jeff Dean的演讲中也给出了例子。
+
+How long to generate image results page \(30 thumbnails\)? 
+
+Design 1: Read serially, thumbnail 256K images on the fly  
+
+30 seeks \* 10 ms/seek + 30 \* 256K / 30 MB/s = 560 ms 
+
+Design 2: Issue reads in parallel:
+
+10 ms/seek + 256K read / 30 MB/s = 18 ms \(Ignores variance, so really more like 30-60 ms, probably\)
+
 
 
