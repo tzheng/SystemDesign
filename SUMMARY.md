@@ -13,6 +13,7 @@
     * [缓存 - Caching](SystemDesign/Basics/huan-cun-caching.md)
     * [地理位置服务 - Location Based Service](SystemDesign/Basics/di-li-wei-zhi-fu-wu-location-based-service.md)
     * [海量数据处理 ](SystemDesign/Basics/hai-liang-shu-ju-chu-li.md)
+    * [附录 - Appendix](SystemDesign/Basics/appendix.md)
   * [系统设计问题详解 - System Design Examples](SystemDesign/Problems/README.md)
     * [信息流 - Newsfeed/Timeline](SystemDesign/Problems/newsfeed.md)
 * [Coding](Coding/README.md)
