@@ -26,8 +26,6 @@
 
 **数据量较大大，操作频繁，QPS较高的时候。**总的来说NoSQL天生就适合scale up，在面对大量负载的时候，NoSQL的performance和availability都比SQL好。如果操作频繁，关系型数据库可能要频繁重建index，影响效率。此外关系型数据库的JOIN复杂度不低 -- 《[how evil is sql join](https://www.quora.com/How-evil-is-SQL-Join)》。
 
-
-
 ---
 
 ## SQL基本概念
@@ -89,6 +87,8 @@ Master-Master的缺点
 如果有多台master，我们要考虑数据的强一致性（strong consistency）的问题，这里可以参考[** Paxos algorithm**](https://www.quora.com/In-distributed-systems-what-is-a-simple-explanation-of-the-Paxos-algorithm) 这是一个必须掌握的概念，我以后会增加这一部分的内容。
 
 **最后，不管是Master-Slave还是Master-Master，这都不是数据库系统特有的scale up方式，其他系统也可以采用。其他的scale up方法有replication和sharding，常见的方法和优缺点会在**[**《分区 - Sharding, Partitoning》**](/SystemDesign/Basics/Sharding.md)**里面说到。**
+
+---
 
 ## NoSQL基本概念
 
