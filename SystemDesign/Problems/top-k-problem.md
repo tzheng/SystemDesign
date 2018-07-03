@@ -23,15 +23,11 @@
 * DataAggregation \(loosy counting, sticky sampling，目的是去掉count 1的东西\)
 * Query \(分成不同的颗粒度granularity来存储，五分钟，一小时，一天\)
 
-
-
-
-
 ### 具体设计 \(以下部分待完成）
 
 #### 需求分析 （Collect Requirement\)
 
-下面以设计热门话题（比如推特/微博上的 \#NBA ）为例
+下面以设计热门话题、标签（比如推特/微博上的 \#NBA ）为例
 
 写频繁
 
@@ -43,15 +39,9 @@
 
 知道最近的x小时/x天/x月/x年的热门话题
 
-
-
 Number: 1 bln DAU, 1 click/user/day, 10K QPS, 50K QPS
 
-
-
 假设是存储热门词汇, 就要给每个词存count, 100M words in english, 100M \\* \\(10 Byte + 8 Byte\\) = 200MB ，不需要很大空间
-
-
 
 但是考虑到QPS， 依然需要很多机器
 
@@ -61,21 +51,11 @@ Number: 1 bln DAU, 1 click/user/day, 10K QPS, 50K QPS
 
 DataCollection
 
-> Q：每次都发送， 对数据库操作太频繁，而且完全没有必要
+> Q：加入我们用一台机器来统计数据，每次用户发帖都要记录到该机器上，机器负载过大
 >
-> A：哪些话题被分享了多少次这些数据，首先在server 中进行一次缓存，也就是server的一个进程接收到一个分享的请求之后，比如 hash tag \#NBA 的帖子。那么他把这个数据先汇报给web server上跑着的 agent 进程，这个agent进程在机器刚启动的时候，就会一直运行着，他接受在台web server上跑着的若干个web 进程\(process\) 发过来的 count +1 请求。这个agent整理好这些数据之后，每隔5~10秒汇报给中心节点。这样子通过5~10s的数据延迟，解决了中心节点访问频率过高的问题
+> A：首先在server 中进行一次缓存，服务器每台机器上可以专门开一个进程来统计数据，这个进程一直在后台运行，比如每次用户发送带有话题 \#NBA 的帖子，就呼叫统计进程来进行+1操作，可以使用一个hashMap。然后每台机器，每隔10秒把数据发送给统计节点。这样子通过10s的延时缓存，解决了统计节点负载过高问题。
 
 CollectionService发过来的信息还是比较多，而且有很多词汇/post share/likes count 只有一个，这些东西完全没有必要统计，所以可以用两个策略：
 
-
-
 Query Service
-
-
-
-
-
-
-
-
 
