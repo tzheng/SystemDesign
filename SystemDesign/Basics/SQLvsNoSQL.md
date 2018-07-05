@@ -88,6 +88,12 @@ Master-Master的缺点
 
 **最后，不管是Master-Slave还是Master-Master，这都不是数据库系统特有的scale up方式，其他系统也可以采用。其他的scale up方法有replication和sharding，常见的方法和优缺点会在**[**《分区 - Sharding, Partitoning》**](/SystemDesign/Basics/Sharding.md)**里面说到。**
 
+> Q：实际工作中并不是能获得足够的资源做replica，这种情况SQL怎么优化？
+>
+> A：很多时候公司可能只有一个数据库（比如Oracle DB），随着数据的增大，这个DB往往成为整个系统的bottleneck，这里介绍一些我做SQL优化的经验，我在工作中经常把数分钟的SQL query优化到1s以内，这部分跟系统设计关系不是很大，没兴趣的可以跳过。
+>
+> 首先是检查Run time SQL query，有的时候你觉得你SQL query是A，实际上是B，经常有可能代码在where clause里面加了一些参数，所以第一步是先检查真正被执行的Query是什么。第二是分析索引\(index\)，大部分时候SQL执行慢是因为索引建立的和where clause不对应。三是减少排序和join，如果经常用到join，可以考虑建立view来加快速度，即使不建立view，那么也要建立合适的index。有的时候有 `where column is not null` 的query，SQL没有办法对null建立索引，所以可以用 wher NVL\(column, 0, 1\) = 1 来处理，然后用nvl\(column, 0, 1\) 来建立索引，这样可以快很多。
+
 ---
 
 ## NoSQL基本概念
