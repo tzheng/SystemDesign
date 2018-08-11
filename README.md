@@ -6,7 +6,7 @@
 
 内容大致如下
 
-#### [**行为问题 Behavior Questions**](https://tzheng.gitbooks.io/cracking-technical-interviews/content/behavior-interview.html)
+#### [**行为问题 Behavior Questions**](https://github.com/tzheng/interviewprep/blob/master/behavior-interview.md)
 
 主要介绍了常见行为面试问题怎么回答
 
