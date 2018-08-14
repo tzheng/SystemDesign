@@ -1,10 +1,10 @@
-## Decode Ways 解码方式 {#activity-name}
+# Decode Ways
 
 Leetcode的第91题，也是一个比较经常出现的面试题。题目很考察面试者对动态规划的理解程度。
 
 A message containing letters from `A-Z` is being encoded to numbers using the following mapping:
 
-```
+```text
 'A' -
 >
  1
@@ -40,7 +40,7 @@ f\[0\] = f\[1\] = 1 ,
 
 f\(i\) = f\(i-2\) + f\(i-1\), 10 &lt;=num&lt;= 26
 
-```
+```text
  = f\(i-1\),             num&lt; 10 ornum&gt;26
 ```
 
@@ -50,7 +50,7 @@ f\(i\) = f\(i-2\) + f\(i-1\), 10 &lt;=num&lt;= 26
 
 **Followup 2：能不能用O\(1\) 的空间来解决问题**
 
-我们看到，对于当前位置**i**，他的数值只和** i-1, i-2**的数值有关，所以其实我们根本不需要用一个数组来存。只需要两个数字存之前两位的结果，不断更新他们就好了。所以代码如下。
+我们看到，对于当前位置**i**，他的数值只和 **i-1, i-2**的数值有关，所以其实我们根本不需要用一个数组来存。只需要两个数字存之前两位的结果，不断更新他们就好了。所以代码如下。
 
 ![](http://mmbiz.qpic.cn/mmbiz_png/PwUnHgDiafaH49NHJll2o9amxCI5u0PlqWZMj5RQcESib66hXjBqMsz5dRAMeQIntna50roic9BcRxnjFgY6ZfP1Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
@@ -60,16 +60,13 @@ f\(i\) = f\(i-2\) + f\(i-1\), 10 &lt;=num&lt;= 26
 
 ![](http://mmbiz.qpic.cn/mmbiz_png/PwUnHgDiafaH49NHJll2o9amxCI5u0PlqDHeTqGmeAtGA70tUATfHvEAKSgT9JWzuf70dPYanib5azTcTQ8DFVJw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
-**Followup 4：如果A 不是对应 1， 我给你一个自定义的Map，可以 A-&gt;9, B-&gt;10... 或者 A -&gt; 20, B-&gt; 50...  题目保证字母对应的数字 &lt; 100**
+**Followup 4：如果A 不是对应 1， 我给你一个自定义的Map，可以 A-&gt;9, B-&gt;10... 或者 A -&gt; 20, B-&gt; 50... 题目保证字母对应的数字 &lt; 100**
 
-**    
-**
-
-之前的解法，我们在判断数字是不是有效的时候，都是直接写  '0' &lt; c &lt;= '9' 和 10 &lt;= number &lt;= 26. 其实这一部分逻辑我们可以放到一个 isValid\(String str\) 的方法里面。
+之前的解法，我们在判断数字是不是有效的时候，都是直接写 '0' &lt; c &lt;= '9' 和 10 &lt;= number &lt;= 26. 其实这一部分逻辑我们可以放到一个 isValid\(String str\) 的方法里面。
 
 privatebooleanisValid\(Stringstr\){
 
-```
+```text
 if\(str.charAt\(0\) =='0'\) {
 
     returnfalse;
@@ -87,7 +84,7 @@ returnnum&gt; 0 &&num&lt;= 26;
 
 privatebooleanisValid\(intnum, Map&lt;Integer, Character&gt;map\){
 
-```
+```text
 returnmap.containsKey\(Integer.valueOf\(num\)\);
 ```
 

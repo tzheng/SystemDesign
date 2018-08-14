@@ -1,4 +1,6 @@
-# Behavior Interview {#behavior-interview}
+# Behavior Interview
+
+## Behavior Interview {#behavior-interview}
 
 现在很多公司都有一轮专门问行为问题，一般叫做Behavior Interview, 也有叫Cross Functional Interview，也有叫Host Manager Interview。不管怎么叫，问的内容都差不错，大致就是了解你过去的经历\(Past Experience\)，是否适合公司的文化\(Culture Fit\)，你个人的兴趣\(Personal Interest/Technical Taste/Your Interest\)和找工作的动机\(Motivation\)。
 
@@ -6,13 +8,13 @@
 
 其实网上有很多准备方法，比较经典的就是所谓的_STAR原则_，即Situation（情景）、Task（任务）、Action（行动）和Result（结果），首先使用这个原则准备3-5个故事，**你需要几个成功的故事，和一两个失败的故事**，然后在这些故事的基础上，我们就可以针对性地准备不同类型的问题。
 
-## 怎么发现故事
+### 怎么发现故事
 
 对于有经验的工程师来说，找到一些故事并不难，毕竟有项目经验很多事情都很好说，对于新毕业生来说，可能项目经验较少，有的人没有实习，只有一些小组作业，这样很难准备几个故事，怎么办？很多人就想着编故事了，大部分时候面试官没有时间和经历去鉴别真伪，**但是这里我不建议编故事，完全编的故事迟早会露馅的，诚实是一个好品质。**
 
 虽然不能编故事，但是可以对你的真实经历进行加工，剪裁，或者移花接木，变成一个适合面试回答的故事。[**一亩三分地上有一篇文章对这个方法做了介绍，可以参照这里**](http://www.1point3acres.com/bbs/thread-290109-1-1.html)。在后面的技巧介绍中，我会继续使用该文章的例子。
 
-## 小技巧
+### 小技巧
 
 在进入正题之前说一个小技巧，被问到比较刁钻的问题，或者是没有准备过的问题的时候，可以：
 
@@ -23,13 +25,11 @@
 >
 > 一般来说面试都是让你说说以前和同事冲突的经历，往往面试者会准备一个故事，说有冲突，然后最后自己说服了对方。这个问题反过来问，说你的同事说服了你。那么遇到这种情况当然就是把准备好的故事反过来说，但是有的时候需要稍微组织一下语言，所以就可以先假装确认问题，重复问题:
 >
-> We have conflict and finally I agree with them?  Ah, It's very common that we have disagreement on a certain topic , usually it's because we see problems in different perspectives. Sometimes I win the debate, sometimes I don't...
+> We have conflict and finally I agree with them? Ah, It's very common that we have disagreement on a certain topic , usually it's because we see problems in different perspectives. Sometimes I win the debate, sometimes I don't...
 >
 > 脱口而出上面那堆废话，同时脑子里在组织后面的答案。其实托福口语也是这么一回事。但是注意一两句就适可而止，说多了就是废话了。
 
-## 
-
-## Past Experience 类型问题
+### Past Experience 类型问题
 
 #### 自我介绍
 
@@ -38,8 +38,6 @@ Brief Introduction on yourself.
 一般在面试刚开始几分钟作为热身问题，让面试官和面试者互相了解。这类问题一般都是标准模板，相信所有人都会准备，总之就是事先准备好比较长的介绍，可以超过3分钟，然后在面试的前几天，**针对你要面试的公司和职位，专门裁剪一下答案**，突出自己适合这类工作。比如面试职位要求有一定的Web Services经验，你就可以在介绍中说自己不少项目都开发或者使用过REST API。
 
 具体可以参考一亩三分地的这篇 [Crack the Behavior Questions——关于Behavior Question的碎碎念](http://www.1point3acres.com/bbs/thread-106072-1-1.html)
-
-#### 
 
 #### 介绍简历项目
 
@@ -57,9 +55,7 @@ Brief Introduction on yourself.
 >
 > Result（结果）：最后速度是以前的xx倍，而且我的方案作为best practice被大家认可，推广。
 
-_\*如果没有这么完美的故事怎么办？请参照前文“怎么发现故事”。其他内容也可以参考一亩三分地的这篇 _[_Crack the Behavior Questions——关于Behavior Question的碎碎念_](http://www.1point3acres.com/bbs/thread-106072-1-1.html)
-
-#### 
+_\*如果没有这么完美的故事怎么办？请参照前文“怎么发现故事”。其他内容也可以参考一亩三分地的这篇_ [_Crack the Behavior Questions——关于Behavior Question的碎碎念_](http://www.1point3acres.com/bbs/thread-106072-1-1.html)
 
 #### 最有挑战性的项目
 
@@ -76,8 +72,6 @@ What's your most challenging project / project you are most proud of ?
 
 _\*如果你觉得自己经验少，找不到值得介绍的项目，请参考上面提到的文章：_[_看看这篇文章参考人家怎么把一件小事包装成富有挑战性的故事_](http://www.1point3acres.com/bbs/thread-290109-1-1.html)_。_
 
-#### 
-
 #### 领导能力
 
 Tell me about a time when you demonstrated leadership skills.
@@ -88,11 +82,11 @@ Tell me about a time when you demonstrated leadership skills.
 
 What's do you see yourself in 5 years? What's your career path? Is there anything change in the past few years?
 
-如果不是General Hire, 面试前看看职位要求，然后自己介绍未来计划的时候可以多，如果是General Hire，那么面试前可以稍微了解一下公司的的常见的Career Path（如果网上找不到，可以问面试官）。遇到这类问题表达结构清晰一些，像写GRE作文，比如可以说：首先，我希望在技术上有所提高，成为某方面的的专家... 其次，我希望能体现出领导力（Leadership\)... 
+如果不是General Hire, 面试前看看职位要求，然后自己介绍未来计划的时候可以多，如果是General Hire，那么面试前可以稍微了解一下公司的的常见的Career Path（如果网上找不到，可以问面试官）。遇到这类问题表达结构清晰一些，像写GRE作文，比如可以说：首先，我希望在技术上有所提高，成为某方面的的专家... 其次，我希望能体现出领导力（Leadership\)...
 
 TBD
 
-## Culture Fit 类型
+### Culture Fit 类型
 
 #### 为什么跳槽，为什么来我们这儿面试？
 
@@ -161,7 +155,7 @@ Describe a situation... / Tell me about a time, conflict with co-worker/manager
 
 有的时候会反过来考你，让你说说有冲突而且你失败的故事，那么你就可以把上面的故事反过来说，同样在说的过程中体现出你是愿意倾听别人意见，愿意承认错误并且配合的人。
 
-## Negative Experience 类型
+### Negative Experience 类型
 
 #### 失败的经历/后悔的决定/如果再做一次你会改变什么
 
@@ -171,7 +165,7 @@ What's your biggest failure? What's your most regretful decision in your work?
 
 我觉得这个例子一般，暂时想不到更好的回答。我在面试中遇到过这个问题，我的回答是结合我自身经历来说的，并不通用，但是回答结构和上面的例子差不多。之后如果有看到更好的例子，会再做补充。
 
-## Question to Ask 类型
+### Question to Ask 类型
 
 无论什么面试最后一般都会留时间让你问问题，虽然很多时候只是走过场，但是并不代表这个环节不会挂人（Mitbbs的帖子也提到了：[behavior question要认真准备](http://www.mitbbs.com/article_t/JobHunting/33356703.html)）。
 
@@ -186,13 +180,11 @@ What's your biggest failure? What's your most regretful decision in your work?
 
 这些问题其实都非常笼统，我认为可以在此基础上优化一下，我叫它“**对症下药”法。**一般面试开始前面试官都会做自我介绍，可以仔细听听面试官都来自哪些组，做什么项目，最后问问题的时候可以问一些针对性的问题，比如面试官是做某个功能的，你可以说我觉得开发这个功能的challenge在这里这里，你认为是什么？比如面试官介绍说原来在A公司工作，现在来了这，你就可以问你觉得两个公司工作上、文化上有什么区别？比如面试官是一个经理，你可以问问他怎么看待员工换组的问题，怎么给员工提供继续教育的问题。其实问题还是上面列出来那些问题，只是你换了一种方式来问。万一面试官是一个很喜欢说话的人，可能这一个问题他就能说很久，如果面试官说的不多，你可以继续针对他的回答再追加问题，这样可以在一个话题上讨论很久，而且显得你尊重面试官，有认真听并且有思考。
 
-## 反例
+### 反例
 
 在面试的过程中一定要随机应变，哪怕你不认同面试官的观点，一定不要顶撞，没事稍微恭维几句但是不要谄媚，否则在一些不必要的地方失分，就功亏一篑了。给大家说一个我听过的反例，某公司面试流程中有一轮是午饭，一般来说午饭就是让来面试的人放松放松，聊聊天就行，但是作为面试官还是要提供反馈的，正常情况下，不管面试者是内向还是外向，只要表现正常都是通过的。偏偏有一个候选人，在明知道和他吃饭的工程师是前端工程师的情况下，还不断发表鄙视前端的言论\(front-end engineers are not real engineers\)，结果可想而知，他挂在午饭这一轮。
 
-
-
-# 总结
+## 总结
 
 当你熟悉了Behavior 问题的套路之后，并且经过**提前准备和反复练习**，相信你的回答在内容上已经不会有什么问题了，剩下的就是看面试官和你是否合得来了。 所以面试过程中一定要自信！和面试官眼神交流！所有回答大声地说出来！同时观察面试官的反应随机应变，做到和面试官谈笑风生，做到这些肯定能得到一个较高的分数。
 
