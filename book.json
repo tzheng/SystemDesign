@@ -1,8 +1,14 @@
 {
+    "gitbook": "3.x.x",
+    "title": "程序员面试笔记",
+    "description": "面试笔记",
     "plugins": ["disqus"],
     "pluginsConfig": {
         "disqus": {
             "shortName": "systemdesignnote"
+        },
+        "github": {
+            "url": "https://github.com/tzheng/interviewprep"
         }
     }
 }
