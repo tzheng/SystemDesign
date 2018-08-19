@@ -2,8 +2,7 @@
 
 个人根据以往面试经验和网络上已有资料所做的总结。
 
-# Table of contents
-* [前言](README.md)
+## [前言](README.md)
 
 
 ## Behavior Interview
@@ -42,6 +41,7 @@
 * [前言](ji-suan-ji-hou-duan-kai-fa-ji-ben-gai-nian/README.md)
 * [Inversion of Control](ji-suan-ji-hou-duan-kai-fa-ji-ben-gai-nian/inversion-of-control.md)
 * [Garbage Collection](ji-suan-ji-hou-duan-kai-fa-ji-ben-gai-nian/garbage-collection.md)
+
 
 
 
