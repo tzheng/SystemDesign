@@ -3,8 +3,8 @@
 个人根据以往面试经验和网络上已有资料所做的总结。
 
 # Table of contents
-## 前言
-* [Introduction](README.md)
+* [前言](README.md)
+
 
 ## Behavior Interview
 * [Behavior Interview](behavior-interview.md)
