@@ -1,4 +1,4 @@
-# CAP定理 - CAP Theorem
+# CAP定理 CAP Theorem
 
 稍微有一些计算机基础的人都知道，在设计算法的时候，需要考虑时间复杂度和空间复杂度，**时间换空间，空间换时间，**要根据实际情况来选择合适的算法，在时间和空间之间做权衡。系统设计也类似，需要在不同的选择之间做权衡，不过不是时间和空间，而是一致性\(consistency\)和可用性\(availability\)，也就是“**consistency换availability，availability换consistency**”，在整个系统设计的过程中，都要把这句话放在心上，这里说的consistency和availability就是CAP里面的C和A。
 
@@ -27,5 +27,5 @@ CAP中的P指的是分区容错性，指的是 “The system continues to operat
 
 为了保证高可用性，就要牺牲一致性，当多个节点之间通信失败的时候，单个节点为了对请求做出响应，会使用本地的数据，这个数据可能过时了，从全局来看，数据并不是一致的。一般NoSQL都选择AP。
 
-![](../../.gitbook/assets/cap-theorem-technology.png)
+![](../.gitbook/assets/cap-theorem-technology.png)
 

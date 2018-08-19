@@ -1,4 +1,4 @@
-# 缓存 - Caching
+# 缓存 Caching
 
 ## 缓存 - Caching
 
