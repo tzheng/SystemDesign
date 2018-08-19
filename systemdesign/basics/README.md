@@ -1,4 +1,4 @@
-# 系统设计基本概念 - System Design Basic Concepts
+# 基本概念 - Concepts
 
 其他内容
 
