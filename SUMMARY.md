@@ -12,16 +12,16 @@
 
 ## 系统设计概念
 
-* [前言](xi-tong-she-ji-gai-nian/basics.md)
-* [估算 Estimation](xi-tong-she-ji-gai-nian/estimations.md)
-* [CAP定理 CAP Theorem](xi-tong-she-ji-gai-nian/cap.md)
-* [一致性哈希 Consistent Hashing](xi-tong-she-ji-gai-nian/yi-zhi-xing-ha-xi-consistent-hashing.md)
-* [分区 Sharding,Partitioning](xi-tong-she-ji-gai-nian/sharding.md)
-* [数据存储 SQL/NoSQL](xi-tong-she-ji-gai-nian/sqlvsnosql.md)
-* [缓存 Caching](xi-tong-she-ji-gai-nian/huan-cun-caching.md)
-* [消息队列 Message Queue](xi-tong-she-ji-gai-nian/message-queue.md)
-* [海量数据处理](xi-tong-she-ji-gai-nian/hai-liang-shu-ju-chu-li.md)
-* [地理位置服务 LBS](xi-tong-she-ji-gai-nian/di-li-wei-zhi-fu-wu-location-based-service.md)
+* [前言](SystemDesignBasics/basics.md)
+* [估算 Estimation](SystemDesignBasics/estimations.md)
+* [CAP定理 CAP Theorem](SystemDesignBasics/cap.md)
+* [一致性哈希 Consistent Hashing](SystemDesignBasics/consistent-hashing.md)
+* [分区 Sharding,Partitioning](SystemDesignBasics/sharding.md)
+* [数据存储 SQL/NoSQL](SystemDesignBasics/sqlvsnosql.md)
+* [缓存 Caching](SystemDesignBasics/huan-cun-caching.md)
+* [消息队列 Message Queue](SystemDesignBasics/message-queue.md)
+* [海量数据处理](SystemDesignBasics/hai-liang-shu-ju-chu-li.md)
+* [地理位置服务 LBS](SystemDesignBasics/di-li-wei-zhi-fu-wu-location-based-service.md)
 
 ## 系统设计问题详解
 

@@ -1,6 +1,6 @@
-# Introduction
+# Table of contents
 
-个人根据以往面试经验和网络上已有资料所做的总结。
+* [Introduction](README.md)
 
 ## 前言
 
@@ -12,16 +12,16 @@
 
 ## 系统设计概念
 
-* [基本概念](xi-tong-she-ji-gai-nian/basics.md)
-* [估算 Estimation](xi-tong-she-ji-gai-nian/estimations.md)
-* [CAP定理 CAP Theorem](xi-tong-she-ji-gai-nian/cap.md)
-* [一致性哈希 Consistent Hashing](xi-tong-she-ji-gai-nian/yi-zhi-xing-ha-xi-consistent-hashing.md)
-* [分区 Sharding,Partitioning](xi-tong-she-ji-gai-nian/sharding.md)
-* [数据存储 SQL/NoSQL](xi-tong-she-ji-gai-nian/sqlvsnosql.md)
-* [缓存 Caching](xi-tong-she-ji-gai-nian/huan-cun-caching.md)
-* [消息队列 Message Queue](xi-tong-she-ji-gai-nian/message-queue.md)
-* [海量数据处理](xi-tong-she-ji-gai-nian/hai-liang-shu-ju-chu-li.md)
-* [地理位置服务 LBS](xi-tong-she-ji-gai-nian/di-li-wei-zhi-fu-wu-location-based-service.md)
+* [前言](SystemDesignBasics/basics.SystemDesignBasicsmd)
+* [估算 Estimation](SystemDesignBasics/estimations.md)
+* [CAP定理 CAP Theorem](SystemDesignBasics/cap.md)
+* [一致性哈希 Consistent Hashing](SystemDesignBasics/consistent-hashing.md)
+* [分区 Sharding,Partitioning](SystemDesignBasics/sharding.md)
+* [数据存储 SQL/NoSQL](SystemDesignBasics/sqlvsnosql.md)
+* [缓存 Caching](SystemDesignBasics/huan-cun-caching.md)
+* [消息队列 Message Queue](SystemDesignBasics/message-queue.md)
+* [海量数据处理](SystemDesignBasics/hai-liang-shu-ju-chu-li.md)
+* [地理位置服务 LBS](SystemDesignBasics/di-li-wei-zhi-fu-wu-location-based-service.md)
 
 ## 系统设计问题详解
 
@@ -40,8 +40,4 @@
 * [前言](qi-ta-gai-nian/ji-suan-ji-hou-duan-kai-fa-ji-ben-gai-nian.md)
 * [Inversion of Control](qi-ta-gai-nian/inversion-of-control.md)
 * [Garbage Collection](qi-ta-gai-nian/garbage-collection.md)
-
-当然，这些内容本身也是个人经验的总结，可能对我来说比较适用，我自己也在不断学习和提高，
-
-免责声明，这里的所有内容都取自网上公开资料，不保证其真实性。
 
