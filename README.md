@@ -1,10 +1,8 @@
-# Table of contents
+# 搬砖工面试总结
+个人根据以往面试经验和网络上已有资料所做的总结。主要涉及行为面试，系统设计，代码面试和基本概念，这是一个大坑，正在慢慢往里面填。
 
-* [Introduction](README.md)
+本总结同步发布在 Gitbook上，排版等会比直接在github上看更好。[https://tzheng.gitbooks.io/cracking-technical-interviews](https://tzheng.gitbooks.io/cracking-technical-interviews)
 
-## 前言
-
-* [目录](qian-yan/readme.md)
 
 ## Behavior Interview
 
@@ -12,7 +10,7 @@
 
 ## 系统设计概念
 
-* [前言](SystemDesignBasics/basics.SystemDesignBasicsmd)
+* [前言](SystemDesignBasics/basics.md)
 * [估算 Estimation](SystemDesignBasics/estimations.md)
 * [CAP定理 CAP Theorem](SystemDesignBasics/cap.md)
 * [一致性哈希 Consistent Hashing](SystemDesignBasics/consistent-hashing.md)
@@ -40,4 +38,5 @@
 * [前言](qi-ta-gai-nian/ji-suan-ji-hou-duan-kai-fa-ji-ben-gai-nian.md)
 * [Inversion of Control](qi-ta-gai-nian/inversion-of-control.md)
 * [Garbage Collection](qi-ta-gai-nian/garbage-collection.md)
+
 
