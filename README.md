@@ -1,11 +1,11 @@
-# 搬砖工面试总结
+# 程序员面试总结
 个人根据以往面试经验和网络上已有资料所做的总结。主要涉及行为面试，系统设计，代码面试和基本概念，这是一个大坑，正在慢慢往里面填。
 
 本总结同步发布在 Gitbook上，排版等会比直接在github上看更好。[https://tzheng.gitbooks.io/cracking-technical-interviews](https://tzheng.gitbooks.io/cracking-technical-interviews)
 
 # 目录
 
-## Behavior Interview
+## 行为面试 Behavior Interview
 
 * [Behavior Interview](behavior-interview/behavior-interview.md)
 
@@ -41,3 +41,4 @@
 * [Garbage Collection](qi-ta-gai-nian/garbage-collection.md)
 
 
+<!-- Keywords: System Design, 系统设计，系统设计面试，程序员面试，刷题，面经，Behavior Interview，行为面试 -->

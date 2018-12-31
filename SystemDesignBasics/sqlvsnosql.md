@@ -118,11 +118,9 @@ Wide-column Store也是非常常用的，典型的代表就是[BigTable](https:/
 
 NoSQL本身就是分布式的，所以scale up的方式也是分布式计算的经典方式，这部分内容会在 [《分区 - Sharding, Partitioning》](sharding.md)里面具体解释。
 
-#### 参考资料
+## 参考资料
 
-《NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence》- by Pramod J. Sadalage,‎ Martin Fowler
-
-[https://www.w3resource.com/mongodb/nosql.php](https://www.w3resource.com/mongodb/nosql.php)
-
-[https://github.com/donnemartin/system-design-primer\#database](https://github.com/donnemartin/system-design-primer#database)
+* 《NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence》- by Pramod J. Sadalage,‎ Martin Fowler
+* [https://www.w3resource.com/mongodb/nosql.php](https://www.w3resource.com/mongodb/nosql.php)
+* [https://github.com/donnemartin/system-design-primer\#database](https://github.com/donnemartin/system-design-primer#database)
 
