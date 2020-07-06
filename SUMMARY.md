@@ -1,7 +1,7 @@
-
 # Summary
 
 ## Introduction
+
 * [前言与目录](README.md)
 
 ## Behavior Interview
@@ -20,6 +20,7 @@
 * [消息队列 Message Queue](SystemDesignBasics/message-queue.md)
 * [海量数据处理](SystemDesignBasics/hai-liang-shu-ju-chu-li.md)
 * [地理位置服务 LBS](SystemDesignBasics/di-li-wei-zhi-fu-wu-location-based-service.md)
+* [分布式ID生成 - Global UUID](SystemDesignBasics/fen-bu-shi-id-sheng-cheng-global-uuid.md)
 
 ## 系统设计问题详解
 
@@ -38,5 +39,4 @@
 * [前言](qi-ta-gai-nian/ji-suan-ji-hou-duan-kai-fa-ji-ben-gai-nian.md)
 * [Inversion of Control](qi-ta-gai-nian/inversion-of-control.md)
 * [Garbage Collection](qi-ta-gai-nian/garbage-collection.md)
-
 
