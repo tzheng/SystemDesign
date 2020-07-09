@@ -4,7 +4,45 @@
 
 保证ID全局唯一有很多办法。
 
-使用平台自带的UUID API 生成：如果使用Java，直接利用util里面的UUID生成128位全局唯一标识符，原理大同小异，一般是通过时间，节点ID（比如mac地址），namespace，随机数等等组合来生成，具体可以参考RFC [https://tools.ietf.org/html/rfc4122](https://tools.ietf.org/html/rfc4122)。优点是简单直接，不需要中心化的服务器，缺点是太长占用比较多空间，ID本身无序，查询效率低（在SQL里面以varchar存储）。
+## UUID
 
-另外一个办法是根据用户数据产生，只要用户数据是唯一，
+使用平台自带的UUID API 生成：如果使用Java，直接利用util里面的UUID生成128位全局唯一标识符，原理大同小异，一般是通过时间，节点ID（比如mac地址），namespace，随机数等等组合来生成，具体可以参考RFC [https://tools.ietf.org/html/rfc4122](https://tools.ietf.org/html/rfc4122)。
+
+**优点：**
+
+* 简单直接，理论上没有性能瓶颈；
+* 不需要中心化的服务器。
+
+**缺点：**
+
+* ID本身128位，太长占用比较多空间；
+* ID以字符串存储，查询效率低，不利于索引查询，参考《[UUIDs are Popular, but Bad for Performance](https://www.percona.com/blog/2019/11/22/uuids-are-popular-but-bad-for-performance-lets-discuss/)》；
+* ID本身无序；ID本身没有任何含义，可读性差。
+
+  
+
+
+## 数据库自增ID - Auto-increment ID
+
+单台机器，多台机器
+
+
+
+## 预先批量生成ID
+
+
+
+
+
+## Snowflake算法
+
+
+
+
+
+### 选读：Redis生成
+
+
+
+
 
