@@ -6,7 +6,7 @@
 
 ## UUID
 
-使用平台自带的UUID API 生成：如果使用Java，直接利用util里面的UUID生成128位全局唯一标识符，原理大同小异，一般是通过时间，节点ID（比如mac地址），namespace，随机数等等组合来生成，具体可以参考RFC [https://tools.ietf.org/html/rfc4122](https://tools.ietf.org/html/rfc4122)。
+使用平台自带的UUID API 生成：如果使用Java，直接利用util里面的UUID生成128位全局唯一标识符，原理大同小异，一般是通过时间，节点ID（比如mac地址），namespace，随机数等等组合来生成，具体可以参考 [UUID RFC](https://tools.ietf.org/html/rfc4122)。
 
 **优点：**
 
@@ -19,30 +19,28 @@
 * ID以字符串存储，查询效率低，不利于索引查询，参考《[UUIDs are Popular, but Bad for Performance](https://www.percona.com/blog/2019/11/22/uuids-are-popular-but-bad-for-performance-lets-discuss/)》；
 * ID本身无序；ID本身没有任何含义，可读性差。
 
-  
-
-
 ## 数据库自增ID - Auto-increment ID
 
 单台机器，多台机器
 
-
-
 ## 预先批量生成ID
-
-
-
-
 
 ## Snowflake算法
 
 
 
+---
+
+**参考文章：**
+
+* [https://tools.ietf.org/html/rfc4122](#)
+* [https://www.percona.com/blog/2019/11/22/uuids-are-popular-but-bad-for-performance-lets-discuss/](https://www.percona.com/blog/2019/11/22/uuids-are-popular-but-bad-for-performance-lets-discuss/)
 
 
-### 选读：Redis生成
 
+**选读：Redis生成**
 
+一般美国主流IT公司系统设计面试不会针对性地考察对某项技术的了解程度，所以把Redis生成放在选读，仅供了解。
 
 
 
