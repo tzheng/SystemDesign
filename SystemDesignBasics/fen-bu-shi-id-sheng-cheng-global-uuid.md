@@ -1,8 +1,6 @@
 # 分布式ID生成 - Global UUID
 
-在分布式系统中， 我们会对数据或者计算资源进行拆分（具体可以参照《分区 Sharding,Partitioning》），但是在分区之后，我们还是需要保证ID在整个系统中都是唯一的，否则就会出现冲突。
-
-保证ID全局唯一有很多办法。
+在分布式系统中，随着业务的增长， 我们会对数据或者计算资源进行拆分，但是在分区之后，我们还是需要保证ID在整个系统中都是唯一的，否则就会出现冲突。这里介绍一些常见的生成方案。
 
 ## UUID
 
@@ -43,8 +41,6 @@ Snowflake是最知名的分布式ID生成算法之一，由Twitter开源。算�
 
 ![](/assets/snowflake_en_v3.png)\*图片来源：[https://shardingsphere.apache.org/document/legacy/3.x/document/en/features/sharding/other-features/key-generator/](https://shardingsphere.apache.org/document/legacy/3.x/document/en/features/sharding/other-features/key-generator/)
 
-
-
 **优点：**
 
 * 本地生成，不需要中心化服务器，高性能
@@ -58,9 +54,7 @@ Snowflake是最知名的分布式ID生成算法之一，由Twitter开源。算�
 
 关于如何解决Snowflake算法依赖时间的缺点，具体可以参考[美团的解决方案](https://tech.meituan.com/2017/04/21/mt-leaf.html)。
 
-## **Redis生成**
 
-一般美国主流IT公司系统设计面试不会针对性地考察对某项技术的了解程度，所以这里不做详细描述。
 
 # 总结
 
