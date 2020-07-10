@@ -21,6 +21,7 @@
 * [消息队列 Message Queue](SystemDesignBasics/message-queue.md)
 * [海量数据处理](SystemDesignBasics/hai-liang-shu-ju-chu-li.md)
 * [地理位置服务 LBS](SystemDesignBasics/di-li-wei-zhi-fu-wu-location-based-service.md)
+* [分布式ID生成](SystemDesignBasics/fen-bu-shi-id-sheng-cheng-global-uuid.md)
 
 ## 系统设计问题详解
 

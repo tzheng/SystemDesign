@@ -1,4 +1,4 @@
-# 分布式ID生成 - Global UUID
+# [分布式ID生成 - Global UUID](/SystemDesignBasics/fen-bu-shi-id-sheng-cheng-global-uuid.md)分布式ID生成
 
 在分布式系统中，随着业务的增长， 我们会对数据或者计算资源进行拆分，但是在分区之后，我们还是需要保证ID在整个系统中都是唯一的，否则就会出现冲突。这里介绍一些常见的生成方案。
 
@@ -53,8 +53,6 @@ Snowflake是最知名的分布式ID生成算法之一，由Twitter开源。算�
 * 依赖于时间戳，如果服务器时间回拨，生成的ID可能重复
 
 关于如何解决Snowflake算法依赖时间的缺点，具体可以参考[美团的解决方案](https://tech.meituan.com/2017/04/21/mt-leaf.html)。
-
-
 
 # 总结
 
