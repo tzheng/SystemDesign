@@ -10,21 +10,21 @@
 
 ### SQL适用的场景
 
-**数据非常规范，相互联系紧密，有结构化的数据一般使用SQL。**因为通常情况下，如果数据是结构化的，业务层的需求可能会带有复杂的query，SQL可以建立多重索引，可以提高查询效率，NoSQL在支持secondary index方面不如SQL。
+**数据非常规范，相互联系紧密，有结构化的数据一般使用SQL**。 因为通常情况下，如果数据是结构化的，业务层的需求可能会带有复杂的query，SQL可以建立多重索引，可以提高查询效率，NoSQL在支持secondary index方面不如SQL。
 
-**数据一致性\(consistency\)比较重要。**SQL事务的ACID特性可保证事物正确可靠，如果系统设计需求中有提到需要支持transaction保证ACID特性，尤其是涉及钱的时候（比如银行转账系统），很有可能需要使用SQL。
+**数据一致性\(consistency\)比较重要**。SQL事务的ACID特性可保证事物正确可靠，如果系统设计需求中有提到需要支持transaction保证ACID特性，尤其是涉及钱的时候（比如银行转账系统），很有可能需要使用SQL。
 
-**需要成熟的解决方案。** SQL就是Structured Query Language，提供了成熟的结构化查询语言。除了查询语言之外，由于历史较长，SQL的搭建流程，配置，库\(Library\)等各个方面都比较成熟，用户社区也活跃，出现问题容易找到解决方案。同时scale up的时候也有比较清晰的模式\(pattern\)
+**需要成熟的解决方案**。SQL就是Structured Query Language，提供了成熟的结构化查询语言。除了查询语言之外，由于历史较长，SQL的搭建流程，配置，库\(Library\)等各个方面都比较成熟，用户社区也活跃，出现问题容易找到解决方案。同时scale up的时候也有比较清晰的模式\(pattern\)
 
 在选择SQL和NoSQL区别不大的时候，可以考虑使用SQL，节省时间和人力成本。
 
 ### NoSQL使用的场景
 
-**非结构化数据，或者数据模型不是非常清晰的时候可以使用NoSQL。**NoSQL的schema比较灵活自由，可以动态更新，值\(value\)里面不需要指定数据格式的，可以存自定义的数据。如果SQL数据量大，新增一个一个column可能会带来重建索引、数据迁移之类的额外开销。
+**非结构化数据，或者数据模型不是非常清晰的时候可以使用NoSQL**。NoSQL的schema比较灵活自由，可以动态更新，值\(value\)里面不需要指定数据格式的，可以存自定义的数据。如果SQL数据量大，新增一个一个column可能会带来重建索引、数据迁移之类的额外开销。
 
-**系统的可用性\(availability\)比较重要的时候。**比如在使用SQL的时候，为了保证consistency，一般会选一个master，那么在master出问题的时候就会有单点故障\(single point of failure\)，所以在对系统可用行要求比较高。根据CAP定理，分布式数据库已经满足了分区容错（P），此时只能在可用性\(A\)和一致性\(C\)中做出选择，NoSQL选择了可用性，所以数据一致性不那么重要的时候，比如社交网络，一般可以使用NoSQL 。
+**系统的可用性\(availability\)比较重要的时候**。比如在使用SQL的时候，为了保证consistency，一般会选一个master，那么在master出问题的时候就会有单点故障\(single point of failure\)，所以在对系统可用行要求比较高。根据CAP定理，分布式数据库已经满足了分区容错（P），此时只能在可用性\(A\)和一致性\(C\)中做出选择，NoSQL选择了可用性，所以数据一致性不那么重要的时候，比如社交网络，一般可以使用NoSQL 。
 
-**数据量较大大，操作频繁，QPS较高的时候。**总的来说NoSQL天生就适合scale up，在面对大量负载的时候，NoSQL的performance和availability都比SQL好。如果操作频繁，关系型数据库可能要频繁重建index，影响效率。此外关系型数据库的JOIN复杂度不低 -- 《[how evil is sql join](https://www.quora.com/How-evil-is-SQL-Join)》。
+**数据量较大大，操作频繁，QPS较高的时候**。总的来说NoSQL天生就适合scale up，在面对大量负载的时候，NoSQL的performance和availability都比SQL好。如果操作频繁，关系型数据库可能要频繁重建index，影响效率。此外关系型数据库的JOIN复杂度不低 -- 《[how evil is sql join](https://www.quora.com/How-evil-is-SQL-Join)》。
 
 ## SQL基本概念
 
