@@ -17,14 +17,14 @@
 * [数据存储 SQL/NoSQL](SystemDesignBasics/sqlvsnosql.md)
 * [缓存 Caching](SystemDesignBasics/huan-cun-caching.md)
 * [消息队列 Message Queue](SystemDesignBasics/message-queue.md)
-* [海量数据处理](SystemDesignBasics/hai-liang-shu-ju-chu-li.md)
+* [海量数据处理](SystemDesignBasics/massive-data-processing.md)
 * [地理位置服务 LBS](SystemDesignBasics/di-li-wei-zhi-fu-wu-location-based-service.md)
 * [分布式ID生成](SystemDesignBasics/fen-bu-shi-id-sheng-cheng-global-uuid.md)
 
 ## 系统设计问题详解
 
-* [信息流 - Newsfeed/Timeline](xi-tong-she-ji-wen-ti-xiang-jie/newsfeed.md)
-* [Top K 问题 - Top K Problem](xi-tong-she-ji-wen-ti-xiang-jie/top-k-problem.md)
+* [信息流 - Newsfeed/Timeline](SystemDesignQuestions/newsfeed.md)
+* [Top K 问题 - Top K Problem](SystemDesignQuestions/top-k-problem.md)
 
 ## 编程问题 - Coding
 
