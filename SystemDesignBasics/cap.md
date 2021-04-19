@@ -27,5 +27,5 @@ CAP中的P指的是分区容错性，指的是 “The system continues to operat
 
 为了保证高可用性，就要牺牲一致性，当多个节点之间通信失败的时候，单个节点为了对请求做出响应，会使用本地的数据，这个数据可能过时了，从全局来看，数据并不是一致的。一般NoSQL都选择AP。
 
-![](../.gitbook/assets/cap-theorem-technology.png)
+![](../assets/Cap-theorem-technology.png)
 
