@@ -38,8 +38,26 @@
 
 总而言之，就是当需要提升系统性能时，检查系统是否存在可以使用异步操作的逻辑，如果存在的话便可以使用消息队列。
 
+
+## 常见消息队列
+消息队列主要分为两种，一种是log-based的，比如Kafka，一种是Queue(FIFO)-based的，比如 RabbitMQ, ActiveMQ 等。它们最大的区别是分发方式不同，log-based的消息队列，
+
+log-based的消息队列的特性：
+* 消息按照先后顺序被处理完，同一个partition里面保证有序。
+* 高吞吐，log-based的queue直接把新消息加到文件末尾，吞吐十分快
+* 可以保存过去的记录，log就是过去消息的记录，可以replay
+* 一个consumer监听一个partition的消息，如果某一条消息需要花大量时间处理，后面的消息都会被block
+
+Queue-based的消息队列的特性：
+* 不能保证有序，比如当前队列有a，b两条消息，a分给consumer1, b分给consumer2，有可能b先被处理完。
+* 存在某些消息需要花大量时间处理的情况，可以增加consumer的数量同时处理剩下的消息，不会被block
+* 消息被处理后就会删除
+
 ## 参考文章
 * [消息队列设计精要](https://zhuanlan.zhihu.com/p/21649950)
 * [消息队列的两种模式](https://blog.csdn.net/HEYUTAO007/article/details/50131089)
+* [kafka核心原理的秘密，藏在这16张图里](https://segmentfault.com/a/1190000037455372)
 
 <!-- Keywords: Message Queue, 消息队列，生产者消费者，点对点，发布订阅，系统设计，解耦，提速，广播，削峰，异步处理，流向控制 -->
+
+
