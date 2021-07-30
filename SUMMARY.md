@@ -18,9 +18,9 @@
 * [海量数据处理](SystemDesignBasics/massive-data-processing.md)
 * [消息队列](SystemDesignBasics/message-queue.md)
 * [缓存](SystemDesignBasics/cache.md)
-* [SQL和NoSQL](sSystemDesignBasics/qlvsnosql.md)
-* [一致性哈希 - Consistent Hashing](consistent-hashing.md)
-* [分区 - Sharding, Partitioning](sharding.md)
+* [SQL和NoSQL](SystemDesignBasics/sqlvsnosql.md)
+* [一致性哈希 - Consistent Hashing](SystemDesignBasics/consistent-hashing.md)
+* [分区 - Sharding, Partitioning](SystemDesignBasics/sharding.md)
 
 
 ## 系统设计问题详解
