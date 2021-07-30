@@ -8,35 +8,36 @@
 
 * [Behavior Interview](behavior-interview/behavior-interview.md)
 
+
 ## 系统设计概念
 
-* [前言](SystemDesignBasics/basics.md)
-* [估算 Estimation](SystemDesignBasics/estimations.md)
-* [CAP定理 CAP Theorem](SystemDesignBasics/cap.md)
-* [一致性哈希 Consistent Hashing](SystemDesignBasics/consistent-hashing.md)
-* [分区 Sharding,Partitioning](SystemDesignBasics/sharding.md)
-* [数据存储 SQL/NoSQL](SystemDesignBasics/sqlvsnosql.md)
-* [缓存 Caching](SystemDesignBasics/huan-cun-caching.md)
-* [消息队列 Message Queue](SystemDesignBasics/message-queue.md)
-* [海量数据处理](SystemDesignBasics/hai-liang-shu-ju-chu-li.md)
-* [地理位置服务 LBS](SystemDesignBasics/di-li-wei-zhi-fu-wu-location-based-service.md)
-* [分布式ID生成](SystemDesignBasics/fen-bu-shi-id-sheng-cheng-global-uuid.md)
+* [估算](estimations.md)
+* [CAP定理](cap.md)
+* [地理位置服务](lbs.md)
+* [分布式全局id](globaluuid.md)
+* [海量数据处理](massive-data-processing.md)
+* [消息队列](message-queue.md)
+* [缓存](cache.md)
+* [SQL和NoSQL](sqlvsnosql.md)
+* [一致性哈希 - Consistent Hashing](consistent-hashing.md)
+* [分区 - Sharding, Partitioning](sharding.md)
+
 
 ## 系统设计问题详解
+* [热门排行榜 - Top K问题](../SystemDesignQuestions/top-k-problem.md)
+* [输入提示 - Typeahead](../SystemDesignQuestions/typeahead.md)
+* [视频平台(Youtube, Netflix)](../SystemDesignQuestions/videoPlatform.md)
+* [网络爬虫](../SystemDesignQuestions/WebCrawl.md)
+* [在线聊天服务](../SystemDesignQuestions/chat.md)
+* [信息流/时间线（Facebook，Twitter...)](../SystemDesignQuestions/newsfeed.md)
+* [地理位置服务（Yelp)](../SystemDesignQuestions/PlaceSuggestionPOI.md)
+* [打车服务(Uber, Lyft)](../SystemDesignQuestions/rideshare.md)
+* [搜索服务(Google, Facebook Status Search)](../SystemDesignQuestions/search.md)
+* [点击统计服务](../SystemDesignQuestions/clickCount.md)
+* [分布式文件系统](../SystemDesignQuestions/distributedFileSystem.md)
+* [分布式工作调度服务](../SystemDesignQuestions/eventScheduler.md)
 
-* [信息流 - Newsfeed/Timeline](xi-tong-she-ji-wen-ti-xiang-jie/newsfeed.md)
-* [Top K 问题 - Top K Problem](xi-tong-she-ji-wen-ti-xiang-jie/top-k-problem.md)
 
 ## 编程问题 - Coding
 
-* [Coding](bian-cheng-wen-ti-coding/coding.md)
-* [Moving Zeros - 移动0](bian-cheng-wen-ti-coding/movingzeros.md)
-* [Decode Ways](bian-cheng-wen-ti-coding/decodeways.md)
-* [Majority Element 找主元素](bian-cheng-wen-ti-coding/majority-element-zhao-zhu-yuan-su.md)
-
-## 其他概念
-
-* [前言](qi-ta-gai-nian/ji-suan-ji-hou-duan-kai-fa-ji-ben-gai-nian.md)
-* [Inversion of Control](qi-ta-gai-nian/inversion-of-control.md)
-* [Garbage Collection](qi-ta-gai-nian/garbage-collection.md)
-
+TBD
