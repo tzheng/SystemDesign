@@ -58,7 +58,10 @@ count(userId, entityId, actionType)
 e.g.
 count(user_1000, video_2000, LIKE), 
 count(user_1000, video_3000, UNLIKE), 
+
 客户端不应该发时间戳，时间戳应该在服务器端加上。
+
+如果要进一步扩展，可以带上tracking，譬如browserId, likeAfterSeconds, 
 ```
 搜集服务把收到的信息发送到消息队列做进一步处理。到目前为止，搜集服务并没有什么复杂的逻辑，它更像是一个stateless的API Gateway。但是我们还需要考虑进一步的需求，比如我们要检测恶意刷好评，差评，那么搜集服务就会增加检测恶意用户的功能，把恶意用户都过滤掉。具体我们会在下文做更详细的介绍。
 

@@ -48,7 +48,7 @@
 * [分区 - Sharding, Partitioning](SystemDesignBasics/sharding.md)
 
 在讨论完了基本概念之后，我们可以总结一套写常见系统设计题的解答。
-* [热门排行榜 - Top K问题](SystemDesignQuestions/top-k-problem.md)
+* [热门排行榜 - Top K问题](SystemDesignQuestions/topk.md)
 * [输入提示 - Typeahead](SystemDesignQuestions/typeahead.md)
 * [视频平台(Youtube, Netflix)](SystemDesignQuestions/videoPlatform.md)
 * [网络爬虫](SystemDesignQuestions/WebCrawl.md)
@@ -59,5 +59,5 @@
 * [搜索服务(Google, Facebook Status Search)](SystemDesignQuestions/search.md)
 * [点击统计服务](SystemDesignQuestions/clickCount.md)
 * [分布式文件系统](SystemDesignQuestions/distributedFileSystem.md)
-* [分布式工作调度服务](SystemDesignQuestions/eventScheduler.md)
+* [分布式工作调度系统](SystemDesignQuestions/eventScheduler.md)
 

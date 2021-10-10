@@ -2,6 +2,20 @@
 ## 模版
 根据情况可以分为几个模板。
 #### 找特定值
+```
+ int l = 0, r = nums.length - 1;
+ while (l <= r) {
+        int mid = l + (r-l) / 2;
+        if (arr[mid] == target)  {
+            return mid;
+        } else if (arr[mid] > target) {
+            r = mid - 1;
+        } else {
+            l = mid + 1;
+        }
+}
+
+```
 
 #### 找下界（第一次出现）
 ```
